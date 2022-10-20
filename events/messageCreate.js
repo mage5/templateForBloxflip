@@ -8,6 +8,8 @@ module.exports = async (client, message) => {
 
   const prefix = message.content.match(prefixMention) ? message.content.match(prefixMention)[0] : '.';
 
+  //To change the prefix change the '.' in [message.content.match(prefixMention)[0] : '.'] to what you desire
+  
   if (message.content.indexOf(prefix) !== 0) return;
 
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
